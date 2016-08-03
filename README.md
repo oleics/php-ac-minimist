@@ -59,6 +59,21 @@ array(9) {
 
 ```
 
+You can specify more details about options:
+
+```php
+use Ac\Minimist
+$opts = Minimist::parse($argv, [
+  'string'    => ['foo', 'g'],
+  'boolean'   => ['baz'],
+  'alias'     => ['foo' => ['f', 'g']],
+  'default'   => [ 'foo' => 'bar', 'baz' => function() { return false; } ],
+  'stopEarly' => false,
+  'unknown' => function($optname){return false;} // return TRUE for known options
+]);
+print_r($opts);
+```
+
 MIT License
 -----------
 
