@@ -17,7 +17,7 @@ Usage
 ```php
 use Ac\Minimist
 $opts = Minimist::parse($argv);
-print_r($opts);
+var_dump($opts);
 ```
 
 ```
@@ -71,7 +71,7 @@ $opts = Minimist::parse($argv, [
   'stopEarly' => false,
   'unknown' => function($optname){return false;} // return TRUE for known options
 ]);
-print_r($opts);
+var_dump($opts);
 ```
 
 MIT License
